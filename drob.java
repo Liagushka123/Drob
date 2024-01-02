@@ -1,8 +1,8 @@
 public class drob {
     public int many = 3; //зачем?
-    public int a; //что это?
-    public int b; //что это?
-    public int c; //что это?
+    public int a; //целое 
+    public int b; //числ
+    public int c; //знам
     
     public drob(int _a, int _b, int _c){
         a = _a;
@@ -10,30 +10,22 @@ public class drob {
         c = _c;
     }
     public void pravelnoe(){
-         int s = a + b / c;
-         int g = b % c;
-               
-        System.out.println( s + "  " + g + "  " + c);
-
+        a = (a * c + b) / c;
+        b = (a * c + b) % c;
+        //System.out.println(this);
     }
 
     public void nepravilnaia(){ //поправить
-        int mnoj= a * c;
-        b = b + mnoj;
+        b = a * c + b;
         a = 0;
-        System.out.println(this); 
-
     }
     public void slojenie(){
          
     }
-    public void writtt(){
-        System.out.println("Drob:" + a +"  " + b +"  " + c );
+    
+    @Override
+    public String toString() {
+        return "Drob: " + a +"  " + b +"  " + c;
     }
-
-
-
-
-
 }  
     
