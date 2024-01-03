@@ -1,5 +1,4 @@
 public class drob {
-    public int many = 3; //зачем?
     public int a; //целое 
     public int b; //числ
     public int c; //знам
@@ -9,16 +8,17 @@ public class drob {
         b = _b;
         c = _c;
     }
+    
     public void pravelnoe(){
         a = (a * c + b) / c;
         b = (a * c + b) % c;
-        //System.out.println(this);
     }
 
-    public void nepravilnaia(){ //поправить
+    public void nepravilnaia(){ 
         b = a * c + b;
         a = 0;
     }
+    
     public drob slojenie(drob nameDrob){
         return new drob(a + nameDrob.a, b * nameDrob.c + nameDrob.b * c, c * nameDrob.c);
     }
@@ -32,11 +32,13 @@ public class drob {
         this.nepravilnaia();
         return new drob(a * Xdrob.a,b * Xdrob.b,c * Xdrob.c);
     }
+    
     public drob dilenie(drob Mdrob){
         this.nepravilnaia();
         Mdrob.nepravilnaia();
         return new drob(a * Mdrob.a,b * Mdrob.c, c * Mdrob.b );
     }
+    
     public void socrashenie(){
         int h = 2;
         while(h <= b ){
@@ -47,17 +49,12 @@ public class drob {
             }
             else{
                 h = h+1;
-            
             }
         }
-
     }
-
-
-
+    
     @Override
     public String toString() {
         return "Drob: " + a +"  " + b +"  " + c;
     }
-}  
-    
+}    
