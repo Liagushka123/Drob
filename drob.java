@@ -1,8 +1,13 @@
+
 public class drob {
+  
+    
+    
     public int a; //целое 
     public int b; //числ
     public int c; //знам
     
+
     public drob(int _a, int _b, int _c){
         a = _a;
         b = _b;
