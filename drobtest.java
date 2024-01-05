@@ -4,6 +4,7 @@ public class drobtest {
     public static void main(String[] args){
         
         Scanner sdf = new Scanner(System.in, "cp866");
+        
         System.out.println("Здраствуйте.\n Рады приветствовать вас в нашем калькуляторе дробных чисел.\n Вы хотите создать дробь.\nВведите"  + " Yes " + "или " + "NO. " + "Соблюдайте регистер букв.");
         
         String vibr = sdf.nextLine();
@@ -29,8 +30,6 @@ public class drobtest {
             String vibr8 = "-";
             String vibr9 = "сокращение";
             
-            System.out.println(vibru);
-
             if (vibru.equals(vibr2)) {
                kl.pravelnoe();
                System.out.println(kl); 
@@ -72,5 +71,6 @@ public class drobtest {
             System.out.println("Введите Yes что бы продолжить или NO что бы закончить. Соблюдайте регистер букв.");
             vibr = sdf.nextLine();
         }
+    sdf.close();  
     }
 }
